@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mcittar/julia_fractals#readme",
   "dependencies": {
     "math": "0.0.3",
+    "mathjs": "^3.10.1",
     "webpack": "^2.3.2"
   }
 }
