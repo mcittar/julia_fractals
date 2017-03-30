@@ -1,0 +1,24 @@
+{
+  "name": "fractal_engine",
+  "version": "1.0.0",
+  "description": "### Background",
+  "main": "sample_two.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcittar/julia_fractals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcittar/julia_fractals/issues"
+  },
+  "homepage": "https://github.com/mcittar/julia_fractals#readme",
+  "dependencies": {
+    "math": "0.0.3",
+    "webpack": "^2.3.2"
+  }
+}
