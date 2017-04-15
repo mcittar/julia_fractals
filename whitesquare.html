@@ -43,7 +43,7 @@
     </script>
 
     <script type="text/javascript">
-    var options = [-0.221, -0.713]
+    var options = [-0.221, -0.713];
     function render(gl,scene) {
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(scene.program);
@@ -71,7 +71,7 @@
       paletteTexture.image = new Image();
       paletteTexture.image.onload = function() {
         handleLoadedTexture(gl, paletteTexture);
-      }
+      };
       paletteTexture.image.src = "./textures/pal.png";
     }
 
@@ -88,12 +88,8 @@
       let pos = getMousePos(e);
       let widthHalved = surface.width / 2;
       let heightHalved = surface.height / 2;
-      // let constantReal = ((pos.x - (widthHalved)) / widthHalved);
       let constantReal = pos.x / surface.width * 2 - 1;
-      // let constantImaginary = (pos.y - (heightHalved)) / heightHalved;
       let constantImaginary = 1 - pos.y / surface.height * 2;
-      console.log(`Real ${constantReal}`);
-      console.log(`Imaginary ${constantImaginary}`);
       options = [constantReal, constantImaginary];
     }
 
@@ -130,10 +126,10 @@
   			1,	1,	0,
   		];
 
-      quadbuffer_vtx = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, quadbuffer_vtx);;
+      let quadbuffer_vtx = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, quadbuffer_vtx);
       gl.enableVertexAttribArray(program.vtxPosAttrib);
-      gl.vertexAttribPointer(program.vtxPosAttrib, 3, gl.FLOAT, false, 0, 0)
+      gl.vertexAttribPointer(program.vtxPosAttrib, 3, gl.FLOAT, false, 0, 0);
       quadbuffer_vtx.itemSize = 3;
   		quadbuffer_vtx.numItems = quadVtx.length / quadbuffer_vtx.itemSize;
 
@@ -150,12 +146,12 @@
   			0,	0,
   			0,	1,
   			1,	1,
-  		]
+  		];
 
-      quadbuffer_uv = gl.createBuffer();
+      let quadbuffer_uv = gl.createBuffer();
       gl.bindBuffer(gl.ARRAY_BUFFER, quadbuffer_uv);
       gl.enableVertexAttribArray(program.vtxUVAttrib);
-      gl.vertexAttribPointer(program.vtxUVAttrib, 2, gl.FLOAT, false, 0, 0)
+      gl.vertexAttribPointer(program.vtxUVAttrib, 2, gl.FLOAT, false, 0, 0);
       quadbuffer_uv.itemSize = 2;
   		quadbuffer_uv.numItems = quadUV.length / quadbuffer_uv.itemSize;
 
