@@ -2,7 +2,7 @@
   "name": "fractal_engine",
   "version": "1.0.0",
   "description": "### Background",
-  "main": "sample_two.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,11 @@
     "url": "git+https://github.com/mcittar/julia_fractals.git"
   },
   "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -26,6 +31,6 @@
     "mathjs": "^3.10.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "webpack": "^2.3.2"
+    "webpack": "^2.4.1"
   }
 }
