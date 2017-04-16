@@ -1,7 +1,7 @@
 ## Julia Fractals
 
 ### Background
-
+TESTING GH PAGES
 A Julia set is a type of fractal. It is a set defined given a rational function (written J(f)). The Julia set consists of values such that an arbitrarily small perturbation can cause drastic changes in the sequence of iterated function values, known as chaotic behavior.
 
 ![Julia](images/julia.png)
