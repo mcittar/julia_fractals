@@ -17,6 +17,7 @@ class Canvas extends React.Component {
     gl.viewport(0, 0, this.surface.width, this.surface.height);
     gl.clearColor(1.0, 0.0, 0.0, 1.0);
     this.props.sendOptions(options);
+    this.props.sendTexture(["./textures/pal.png"]);
     initWebGL(gl);
   }
 
