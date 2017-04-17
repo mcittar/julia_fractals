@@ -5,12 +5,11 @@ class TextureIndex extends React.Component {
   constructor(props){
     super(props);
     this.textures = [["Default", "./textures/pal.png", [0,0,0]],
-                      ["Blue", "./textures/bluepal.png", [0,1,0]],
-                      ["Gold", "./textures/golden.png", [0,1,1]],
-                      ["Green", "./textures/greens.png", [0,1,0]],
-                      ["Purple", "./textures/purples.png", [1,0,1]],
-                      ["Chaos", "./textures/aneurism.png", [1,0,0]],
-                      ["Sunset", "./textures/sunset.png", [0,1,0]]];
+                      ["Blue", "./textures/bluepal.png", [0,.3,1]],
+                      ["Gold", "./textures/golden.png", [0.721569,0.52549,0.0431373]],
+                      ["Green", "./textures/greens.png", [0.333333,0.419608,0.184314]],
+                      ["Purple", "./textures/purples.png", [0.580392,0,0.827451]],
+                      ["Chaos", "./textures/aneurism.png", [0.294118,0,0.509804]]];
   }
 
   render(){
