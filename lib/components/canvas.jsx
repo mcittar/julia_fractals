@@ -57,6 +57,10 @@ class Canvas extends React.Component {
 }
 
 function render(gl, scene) {
+  if (background === undefined){
+    background = [0,0,0];
+  }
+
   gl.clear(gl.COLOR_BUFFER_BIT);
   gl.useProgram(scene.program);
 
@@ -64,7 +68,6 @@ function render(gl, scene) {
   gl.bindTexture(gl.TEXTURE_2D, paletteTexture);
   gl.uniform1i(scene.program.samplerUniform, 0);
 
-  console.log(background);
   gl.uniform3fv(scene.program.defaultColor, new Float32Array(background));
   gl.uniform2fv(scene.program.cUniform, new Float32Array(options));
 
