@@ -11,6 +11,12 @@ class Canvas extends React.Component {
     this.onMouseMove = this.onMouseMove.bind(this);
   }
 
+  componentWillReceiveProps(nextProps){
+    if (this.props.texture !== nextProps.texture){
+      paletteTexture.image.src = nextProps.texture[0];
+    }
+  }
+
   componentDidMount(){
     this.surface = document.getElementById('rendering-surface');
     const gl = this.surface.getContext('experimental-webgl');
