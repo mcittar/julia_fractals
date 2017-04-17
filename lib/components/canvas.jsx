@@ -1,6 +1,7 @@
 import React from 'react';
 import Numbers from './numbers.jsx';
 var options = [-0.221, -0.713];
+var background = [0,0,0];
 var paletteTexture;
 
 
@@ -14,6 +15,7 @@ class Canvas extends React.Component {
   componentWillReceiveProps(nextProps){
     if (this.props.texture !== nextProps.texture){
       paletteTexture.image.src = nextProps.texture[0];
+      background = nextProps.texture[1];
     }
   }
 
@@ -23,7 +25,7 @@ class Canvas extends React.Component {
     gl.viewport(0, 0, this.surface.width, this.surface.height);
     gl.clearColor(1.0, 0.0, 0.0, 1.0);
     this.props.sendOptions(options);
-    this.props.sendTexture(["./textures/pal.png"]);
+    this.props.sendTexture(["./textures/aneurism.png"]);
     initWebGL(gl);
   }
 
@@ -62,6 +64,8 @@ function render(gl, scene) {
   gl.bindTexture(gl.TEXTURE_2D, paletteTexture);
   gl.uniform1i(scene.program.samplerUniform, 0);
 
+  console.log(background);
+  gl.uniform3fv(scene.program.defaultColor, new Float32Array(background));
   gl.uniform2fv(scene.program.cUniform, new Float32Array(options));
 
   gl.bindBuffer(gl.ARRAY_BUFFER, scene.object.vertexBuffer);
@@ -187,7 +191,8 @@ function createProgram(gl, shaderSpecs) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     throw gl.getProgramInfoLog(program);
   }
-  program.vtxPosAttribute = gl.getAttribLocation(program, 'vtx_pos');
+  program.vtxPosAttrib = gl.getAttribLocation(program, 'vtx_pos');
+  program.defaultColor = gl.getUniformLocation(program, "bg_color");
   program.vtxUVAttrib = gl.getAttribLocation(program, "vtx_uv");
   program.samplerUniform = gl.getUniformLocation(program, "uSampler");
   program.cUniform = gl.getUniformLocation(program, "c");
