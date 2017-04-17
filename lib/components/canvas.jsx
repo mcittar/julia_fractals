@@ -39,7 +39,6 @@ class Canvas extends React.Component {
   }
 
   render() {
-    console.log(this.props.options);
     return (
       <div>
         <canvas onMouseMove={ this.onMouseMove }id="rendering-surface" width="650" height="650"></canvas>
