@@ -1,5 +1,6 @@
 import React from 'react';
-import Canvas from './components/canvas.jsx';
+import Numbers from './components/numbers_container.jsx';
+import Canvas from './components/canvas_container.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -9,6 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='app'>
+        <Numbers />
         <Canvas />
       </div>
     );

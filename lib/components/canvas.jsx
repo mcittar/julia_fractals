@@ -16,6 +16,7 @@ class Canvas extends React.Component {
     const gl = this.surface.getContext('experimental-webgl');
     gl.viewport(0, 0, this.surface.width, this.surface.height);
     gl.clearColor(1.0, 0.0, 0.0, 1.0);
+    this.props.sendOptions(options);
     initWebGL(gl);
   }
 
@@ -26,6 +27,7 @@ class Canvas extends React.Component {
     let constantReal = pos.x / this.surface.width * 2 - 1;
     let constantImaginary = 1 - pos.y / this.surface.height * 2;
     options = [constantReal, constantImaginary];
+    this.props.sendOptions(options);
   }
 
   getMousePos(e) {
@@ -37,9 +39,9 @@ class Canvas extends React.Component {
   }
 
   render() {
+    console.log(this.props.options);
     return (
       <div>
-        <Numbers options={ options }/>
         <canvas onMouseMove={ this.onMouseMove }id="rendering-surface" width="650" height="650"></canvas>
       </div>
     );
