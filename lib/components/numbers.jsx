@@ -13,10 +13,14 @@ class Numbers extends React.Component {
     let roundedImaginary = Math.round((this.props.options[1] * 1000)) / 1000;
 
     return (
-      <div>
-        { roundedReal }
-        { roundedImaginary }
-      </div>
+      <section className='number-section'>
+        <div>
+          <span className='font'>Real Constant: </span><span className='font'>{ roundedReal }</span>
+        </div>
+        <div>
+          <span className='font'>Imaginary Constant: </span><span className='font'>{ roundedImaginary }</span>
+        </div>
+      </section>
     );
   }
 }

@@ -11,9 +11,14 @@ class App extends React.Component {
   render() {
     return (
       <div className='app'>
-        <Numbers />
-        <Canvas />
-        <TextureIndex />
+        <section className='left-section'>
+          <span className='font title'>Julia Fractal Generator</span>
+          <Canvas />
+          <Numbers />
+        </section>
+        <section className='right-section'>
+          <TextureIndex />
+        </section>
       </div>
     );
   }

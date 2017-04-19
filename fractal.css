@@ -1,0 +1,116 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root, #app {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Clearfix */
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input, button, textarea {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+	font-family: sans-serif;
+	font-weight: none;
+ 	padding: 5px 12px;
+ 	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 13px;
+  background-color: white
+}
+
+.app {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow-x:scroll;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.left-section, .right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-section {
+  width: 650px;
+}
+
+.right-section {
+  width: 180px;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.numbers-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font {
+  font-family: sans-serif;
+  color: white;
+}

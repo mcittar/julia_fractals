@@ -18,9 +18,9 @@ class TextureIndex extends React.Component {
     });
 
     return(
-      <div>
+      <section className='buttons-section'>
         { buttons }
-      </div>
+      </section>
     );
   }
 }
