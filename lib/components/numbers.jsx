@@ -15,10 +15,14 @@ class Numbers extends React.Component {
     return (
       <section className='number-section'>
         <div>
-          <span className='font'>Real Constant: </span><span className='font'>{ roundedReal }</span>
+          <div className='shifter'>
+            <span className='font'>Real Constant: </span><span className='font'>{ roundedReal }</span>
+          </div>
         </div>
         <div>
-          <span className='font'>Imaginary Constant: </span><span className='font'>{ roundedImaginary }</span>
+          <div className='shifter'>
+            <span className='font'>Imaginary Constant: </span><span className='font'>{ roundedImaginary }</span>
+          </div>
         </div>
       </section>
     );

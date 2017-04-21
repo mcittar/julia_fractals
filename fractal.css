@@ -57,7 +57,7 @@ input, button, textarea {
   text-align: center;
   cursor: pointer;
   width: 100%;
-	font-family: sans-serif;
+	font-family: 'Roboto Slab', serif;
 	font-weight: none;
  	padding: 5px 12px;
  	margin: 8px 0;
@@ -68,7 +68,7 @@ input, button, textarea {
 }
 
 .app {
-  background: black;
+  background: #101010;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,16 +77,22 @@ input, button, textarea {
   overflow-x:scroll;
 }
 
+#rendering-surface {
+  box-shadow: 0 0 6px 3px #303030;
+}
+
 .title {
   margin-bottom: 20px;
   font-size: 36px;
+  font-family: 'Nova Square', cursive;
+  color: white;
 }
 
 .left-section, .right-section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .left-section {
@@ -94,7 +100,16 @@ input, button, textarea {
 }
 
 .right-section {
-  width: 180px;
+  position: absolute;
+  width: 220px;
+  background: #282828;
+}
+
+.relative-wrapper {
+  position: relative;
+  left: 30px;
+  right: 0;
+  bottom: 150px;
 }
 
 .buttons-section {
@@ -110,7 +125,16 @@ input, button, textarea {
   align-items: center;
 }
 
-.font {
-  font-family: sans-serif;
+.font, .shifting {
+  font-family: 'Roboto Slab', serif;
   color: white;
+}
+
+.font {
+  text-align: left;
+}
+
+.shifter {
+  display: flex;
+  justify-content: space-between;
 }

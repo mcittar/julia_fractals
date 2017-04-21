@@ -49,9 +49,10 @@ class Canvas extends React.Component {
 
   render() {
     return (
-      <div>
+      <section className='left-section'>
+        <span className='title'>Julia Fractal Generator</span>
         <canvas onMouseMove={ this.onMouseMove }id="rendering-surface" width="650" height="650"></canvas>
-      </div>
+      </section>
     );
   }
 }

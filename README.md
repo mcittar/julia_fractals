@@ -4,7 +4,7 @@
 
 A Julia set is a type of fractal. It is a set defined given a rational function (written J(f)). The Julia set consists of values such that an arbitrarily small perturbation can cause drastic changes in the sequence of iterated function values, known as chaotic behavior.
 
-![Julia](images/julia.png)
+![Julia](images/julia_dust_big.png)
 
 ### Functionality & MVP
 
@@ -15,7 +15,7 @@ With this Julia fractal visualizer, users will be able to:
 
 ### Wireframes
 
-This app will consist of a single screen with a canvas, an user input area, and nav links to my Github and LinkedIn.
+This app will consist of a single screen with a canvas, a user input area, and nav links to my Github and LinkedIn.
 Users will be able to change the constants of the fractal equation in order to generate different images in the canvas.
 Initially, this will happen in a fixed input field.
 As a bonus feature, I hope to implement constant rendering where constants are based on mouse position.
@@ -27,13 +27,12 @@ As a bonus feature, I hope to implement constant rendering where constants are b
 
 This project will be implemented with the following technologies:
 
-- Vanilla JavaScript and `jquery` for overall structure,
-- `Easel.js` with `HTML5 Canvas` for DOM manipulation and rendering,
+- React for site structure and rendering of non-canvas components
+- `WebGL` for DOM manipulation and dynamic rendering of fractal set
+- Redux for passing information from users to WebGL canvas
 - Webpack to bundle and serve up the various scripts.
 
 In addition to the webpack entry file, there will be one script that handles the fractal calculation and pixel rendering
-
-As a bonus feature, I would like to implement the rendering using `three.js`
 
 ### Implementation Timeline
 
@@ -62,4 +61,4 @@ Goal: for the day:
 
 - Fractal set determined by mouse position
 - Fractal updates constantly as mouse moves
-- Refactor rendering using three.js
+- Refactor rendering using WebGL
