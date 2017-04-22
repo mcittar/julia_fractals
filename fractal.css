@@ -103,6 +103,8 @@ input, button, textarea {
   position: absolute;
   width: 220px;
   background: #282828;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 4px black;
 }
 
 .relative-wrapper {
