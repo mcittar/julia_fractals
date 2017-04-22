@@ -11,22 +11,26 @@ class Numbers extends React.Component {
   render(){
     let roundedReal = Math.round((this.props.options[0] * 1000)) / 1000;
     let roundedImaginary = Math.round((this.props.options[1] * 1000)) / 1000;
+    let operator = roundedImaginary < 0 ? '-' : '+';
 
     return (
       <section className='number-section'>
-        <div>
-          <div className='shifter'>
-            <span className='font'>Real Constant: </span><span className='font'>{ roundedReal }</span>
-          </div>
-        </div>
-        <div>
-          <div className='shifter'>
-            <span className='font'>Imaginary Constant: </span><span className='font'>{ roundedImaginary }</span>
-          </div>
-        </div>
+        <span className='font'>C = { roundedReal } { operator } { Math.abs(roundedImaginary) }i</span>
+
       </section>
     );
   }
 }
 
 export default Numbers;
+
+
+// <div>
+//   <div className='shifter'>
+//     <span className='font'>Real Constant: </span><span className='font'>{ roundedReal }</span>
+//   </div>
+// </div>
+// <div>
+//   <div className='shifter'>
+//     <span className='font'>Imaginary Constant: </span><span className='font'>{ roundedImaginary }</span>
+//   </div>
