@@ -13,7 +13,7 @@ class TextureButton extends React.Component{
   render(){
 
     return(
-      <button onClick={ this.changeTexture }>{ this.props.name }</button>
+      <option value={ this.props.name }>{ this.props.name }</option>
     );
   }
 }
