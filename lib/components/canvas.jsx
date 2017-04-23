@@ -195,9 +195,9 @@ function createProgram(gl, shaderSpecs) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     throw gl.getProgramInfoLog(program);
   }
-  program.vtxPosAttrib = gl.getAttribLocation(program, 'vtx_pos');
+  program.vtxPosAttrib = gl.getAttribLocation(program, 'vertexPosition');
   program.defaultColor = gl.getUniformLocation(program, "bg_color");
-  program.vtxUVAttrib = gl.getAttribLocation(program, "vtx_uv");
+  program.vtxUVAttrib = gl.getAttribLocation(program, "vertexUV");
   program.samplerUniform = gl.getUniformLocation(program, "uSampler");
   program.cUniform = gl.getUniformLocation(program, "c");
 

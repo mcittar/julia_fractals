@@ -2,6 +2,7 @@ import React from 'react';
 import Numbers from './components/numbers_container.jsx';
 import Canvas from './components/canvas_container.jsx';
 import TextureIndex from './components/texture_index_container.jsx';
+import About from './components/about.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -17,6 +18,7 @@ class App extends React.Component {
             <section className='right-section'>
               <Numbers />
               <TextureIndex />
+              <About />
             </section>
           </section>
 

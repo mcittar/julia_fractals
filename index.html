@@ -6,16 +6,15 @@
     <link rel="stylesheet" type="text/css" href="fractal.css">
     <link href="https://fonts.googleapis.com/css?family=Nova+Square|Roboto+Slab" rel="stylesheet">
     <script type="x-shader/x-vertex" id="vertex-shader">
-    #define iterations MAX_ITER
     precision mediump float;
 
-    attribute vec3 vtx_pos;
-    attribute vec2 vtx_uv;
-    varying vec2 texcoord;
+    attribute vec3 vertexPosition;
+    attribute vec2 vertexUV;
+    varying vec2 textureCoordinate;
 
     void main() {
-      texcoord = vtx_uv;
-      gl_Position = vec4(vtx_pos, 1.0);
+      textureCoordinate = vertexUV;
+      gl_Position = vec4(vertexPosition, 1.0);
     }
     </script>
 
@@ -23,13 +22,13 @@
     const int iterations = 200;
     precision mediump float;
 
-    varying vec2 texcoord;
+    varying vec2 textureCoordinate;
     uniform sampler2D uSampler;
     uniform vec3 bg_color;
     uniform vec2 c;
 
     void main() {
-      vec2 z = vec2(2.6, 2.6) * (texcoord - vec2(0.5, 0.5));
+      vec2 z = vec2(2.6, 2.6) * (textureCoordinate - vec2(0.5, 0.5));
 
   		gl_FragColor = vec4(bg_color, 1); // controls background color
 

@@ -20,6 +20,26 @@ html, body {
   height: 100%;
 }
 
+select {
+  margin: 40px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 130px;
+  padding: 5px 20px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  /*height: 34px;*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://www.clker.com/cliparts/5/7/2/2/13099636781085637687dropdown.svg.med.png) 96% / 15% no-repeat #eee;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+
 #root, #app {
   height: 100%;
 }
@@ -123,10 +143,11 @@ input, button, textarea {
   flex-direction: column;
 }
 
-.numbers-section {
+.number-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .font, .shifting {

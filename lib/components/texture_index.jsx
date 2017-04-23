@@ -5,7 +5,7 @@ class TextureIndex extends React.Component {
   constructor(props){
     super(props);
     this.colors = {
-      Default: ["./textures/pal.png", [0,0,0]],
+      Fire: ["./textures/pal.png", [0,0,0]],
       Blue: ["./textures/bluepal.png", [0,.3,1]],
       Gold: ["./textures/golden.png", [0.721569,0.52549,0.0431373]],
       Green: ["./textures/greens.png", [0.333333,0.419608,0.184314]],
@@ -13,7 +13,7 @@ class TextureIndex extends React.Component {
       Chaos: ["./textures/aneurism.png", [0.294118,0,0.509804]]
     };
     this.state = {
-      value: "Default"
+      value: "Fire"
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -26,9 +26,9 @@ class TextureIndex extends React.Component {
     let location;
     let background;
     switch (this.state.value) {
-      case "Default":
-        location = this.colors.Default[0];
-        background = this.colors.Default[1];
+      case "Fire":
+        location = this.colors.Fire[0];
+        background = this.colors.Fire[1];
         break;
       case "Blue":
         location = this.colors.Blue[0];
@@ -51,8 +51,8 @@ class TextureIndex extends React.Component {
         background = this.colors.Chaos[1];
         break;
       default:
-        location = this.colors.Default[0];
-        background = this.colors.Default[1];
+        location = this.colors.Fire[0];
+        background = this.colors.Fire[1];
     }
     this.props.sendTexture([location, background]);
   }
