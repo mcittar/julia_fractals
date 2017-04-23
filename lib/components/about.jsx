@@ -8,11 +8,11 @@ class About extends React.Component {
   render(){
 
     return(
-      <span className='font'>
+      <section className='about-section'>
         <a className='font' href="https://en.wikipedia.org/wiki/Julia_set">About</a>
-          |
-        <a className='font' href="https://github.com/mcittar/julia_fractals">Github</a>
-      </span>
+        <span className='bar font'>|</span>
+        <a className='font' href="https://github.com/mcittar/julia_fractals/tree/gh-pages">Github</a>
+      </section>
     );
   }
 }

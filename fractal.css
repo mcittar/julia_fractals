@@ -163,3 +163,11 @@ input, button, textarea {
   display: flex;
   justify-content: space-between;
 }
+
+.about-section {
+  margin-bottom: 20px;
+}
+
+.bar {
+  margin: 0 15px;
+}
