@@ -20,7 +20,7 @@ The color value of the pixel will then become the number of times we had to iter
 ### The Shader
 In this program, the Julia set is rendered on screen using WebGL shaders. Initially I created a renderer using canvas and pure Javascript but ran into serious performance problems. A 500x500 canvas has 250,000 pixels with each pixel performing between 1 - 200 complex calculations leading to very slow generation times that would not be tolerated by any sane user. This was largely due to the fact that Javascript, as a single threaded language, could not take advantage of the [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) nature of Julia set pixel calculations. Fortunately, WebGL can!
 
-WebGL is able to pass simplified chunks of data to your computer's multi-core GPU which calculates hundreds of pixels simultaneously. Taking a 4 point UV quad, this shader uses interpolation to calculate every pixel coordinate in the quad and samples a color from a given texture based on the iterations needed to break loop described above. Using a texture for determining color allows the program to easily use different color palettes to render the set.
+WebGL is able to pass simplified chunks of data to your computer's multi-core GPU which calculates hundreds of pixels simultaneously. Taking a 4 point UV quad, this shader uses interpolation to calculate every pixel coordinate in the quad sampling a color from a given texture determined by it's calculated iterations. Using a texture for determining color allows the program to easily use different color palettes to render the set.
 
 ```
 void main() {
